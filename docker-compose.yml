@@ -1,25 +1,18 @@
-acme_graphql:
+nginx:
     build: .
+    ports:
+        - "8050:80"
     links:
-        - nginx
+        - fpm
         - mysql
-    tty: true
-    working_dir: /acme-graphql
+fpm:
+    image: php:7.2-fpm
     volumes:
         - ./:/acme-graphql
-    restart: always
-nginx:
-    image: nginx:alpine
-    ports:
-        - "8000:80"
-        - "3000:443"
-    environment:
-        - NGINX_HOST=${NGINX_HOST}
-    restart: always
+
 mysql:
     image: mysql:5.7
     environment:
         - DB_HOST=mysql
         - MYSQL_ROOT_PASSWORD=password
         - MYSQL_DATABASE=acme_graphql
-    restart: always

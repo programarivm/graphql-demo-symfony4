@@ -9,7 +9,8 @@
         "symfony/flex": "^1.0",
         "symfony/framework-bundle": "^4.1",
         "symfony/lts": "^4@dev",
-        "symfony/yaml": "^4.1"
+        "symfony/yaml": "^4.1",
+        "youshido/graphql-bundle": "^1.4"
     },
     "require-dev": {
         "symfony/dotenv": "^4.1"

@@ -85,5 +85,11 @@
     },
     "symfony/yaml": {
         "version": "v4.1.1"
+    },
+    "youshido/graphql": {
+        "version": "v1.5.4"
+    },
+    "youshido/graphql-bundle": {
+        "version": "v1.4"
     }
 }
