@@ -1,18 +1,18 @@
 nginx:
     build: .
     ports:
-        - "8050:80"
+        - "8000:80"
     links:
         - fpm
         - mysql
 fpm:
     image: php:7.2-fpm
     volumes:
-        - ./:/acme-graphql
+        - ./:/demo-graphql
 
 mysql:
     image: mysql:5.7
     environment:
         - DB_HOST=mysql
         - MYSQL_ROOT_PASSWORD=password
-        - MYSQL_DATABASE=acme_graphql
+        - MYSQL_DATABASE=demo_graphql
