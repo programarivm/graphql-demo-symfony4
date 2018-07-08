@@ -134,9 +134,6 @@
             "ref": "f8a63faa0d9521526499c0a8f403c9964ecb0527"
         }
     },
-    "symfony/templating": {
-        "version": "v4.1.1"
-    },
     "symfony/yaml": {
         "version": "v4.1.1"
     },
