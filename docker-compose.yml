@@ -4,15 +4,7 @@ nginx:
         - "8000:80"
     links:
         - fpm
-        - mysql
 fpm:
     image: php:7.2-fpm
     volumes:
         - ./:/graphql-demo-symfony4
-
-mysql:
-    image: mysql:5.7
-    environment:
-        - DB_HOST=mysql
-        - MYSQL_ROOT_PASSWORD=password
-        - MYSQL_DATABASE=demo_graphql

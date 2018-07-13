@@ -1,16 +1,16 @@
 ## GraphQL Demo for Symfony 4
 
-This is a minimum set up to show how to use [GraphQLBundle](https://github.com/Youshido/GraphQLBundle) in Symfony 4 projects, and is an equivalent of [Youshido/GraphQLDemoApp](https://github.com/Youshido/GraphQLDemoApp/blob/master/README.md) -- a GraphQL demo for Symfony 3.
+This is a simple demo that shows how to use [GraphQLBundle](https://github.com/Youshido/GraphQLBundle) in Symfony 4 projects, and is an equivalent of [Youshido/GraphQLDemoApp](https://github.com/Youshido/GraphQLDemoApp/blob/master/README.md) -- a GraphQL demo for Symfony 3.
 
-GraphQL Demo for Symfony 4 is been built with the feedback and comments made at https://github.com/Youshido/GraphQLBundle/issues/68.
+This Hello World app is been set up with the comments made in this discussion: [Symfony 4 support](https://github.com/Youshido/GraphQLBundle/issues/68).
 
 ### How to Run
 
     docker-compose up --build
 
-### Sending Requests
+### Examples
 
-Now you can easily send request to endpoint, for example:
+Request:
 
     $ curl -XPOST 'http://127.0.0.1:8000/graphql'
 
@@ -24,35 +24,25 @@ Response:
         ]
     }
 
-### TODOs
+Request:
 
-At this moment there's no data available, so the following request:
+    $ curl -XPOST 'http://127.0.0.1:8000/graphql' -F 'query={ greeting }'
 
-    $ curl -XPOST 'http://127.0.0.1:8000/graphql' -F 'query={ todos { id } }'
-
-Will return this response:
+Response:
 
     {
         "data": {
-            "todos": null
-        },
-        "errors": [
-            {
-                "message": "You have requested a non-existent service \u0022resolver.todo\u0022."
-            }
-        ]
-    }
-
-However, it has to return something similar to this:
-
-    {
-        "data": {
-            "todos": [
-              {
-                "id": 129
-              }
-            ]
+            "greeting": "Hello world!"
         }
     }
 
-> Note that `docker-compose.yml` is assuming that a MySQL database is going to be used, however this demo could be even simpler without any database. The objective is to set up a minimal GraphQL API. Any ideas are welcome!
+## 2. Contributions
+
+Contributions are welcome.
+
+- Feel free to send a pull request
+- Drop an email at info@programarivm.com with the subject "GraphQL Demo for Symfony 4"
+- Leave me a comment on [Twitter](https://twitter.com/programarivm)
+- Say hello on [Google+](https://plus.google.com/+Programarivm)
+
+Many thanks.
