@@ -6,13 +6,19 @@ This Hello World app is been set up with the comments made in this discussion: [
 
 ### How to Run
 
-    docker-compose up --build
+Install dependencies:
+
+    composer install
+
+Run the web server:
+
+    php -S 127.0.0.1:8085 -t public
 
 ### Examples
 
 Request:
 
-    $ curl -XPOST 'http://127.0.0.1:8000/graphql'
+    $ curl -XPOST 'http://localhost:8085/graphql'
 
 Response:
 
@@ -26,7 +32,7 @@ Response:
 
 Request:
 
-    $ curl -XPOST 'http://127.0.0.1:8000/graphql' -F 'query={ greeting }'
+    $ curl -XPOST 'http://localhost:8085/graphql' -F 'query={ greeting }'
 
 Response:
 
