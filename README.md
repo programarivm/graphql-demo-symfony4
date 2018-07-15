@@ -42,7 +42,7 @@ Response:
         }
     }
 
-## 2. Contributions
+## Contributions
 
 Contributions are welcome.
 
